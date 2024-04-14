@@ -1,0 +1,88 @@
+{
+    "course" : "EECS 280 - Data Structures",
+    "chapters" : {
+        "21" : {
+            "title" : "Binary Search Trees",
+            "introduction" : "The fundamental idea of pointers is that we might like to work with addresses of objects in our programs as well as just their values/data. Why? Pretty much the same reason we use addresses anywhere else - sometimes we need to work indirectly. For example, in the 'real world', an address book refers to the places that people live, but it doesn't literally contain those places! (That wouldn't even make sense.). Likewise, in a program we might want several different parts of our code to refer to the same data structure, but we don't want them all to literally have a local copy of that data. It would be better to know the address of the data and just go look it up when we need to.",
+            "submodules" : {
+                "1" : {
+                    "index" : 3.1,
+                    "title" : "Intro to Binary Search Trees",
+                    "learning_objectives" : {
+                        "1" : "You can get the address of a variable using the & operator.",
+                        "2" : "Pointers are variables that store addresses of other variables.",
+                        "3" : "To declare a pointer, affix a * to the type of the variable it will point to.",
+                        "4" : "There is a separate pointer type for each variable type, and you can't mix them."
+                    },
+                    "content" : {
+                        "introduction" : "First, let's take a look at how we can find out the address of variables/objects in our program using the & operator.",
+                        "video_link" : "./videos/bst.mp4"
+                    },
+                    "questions" : {
+                        "1" : {
+                            "id": 1,
+                            "title" : "Exercise: Addresses and Pointers",
+                            "question_background": [
+                                "Consider the program below and answer a few questions.",
+                                "```cint main() {\n\tint x = 4;\n\tint y = 7;\n\tdouble z = 1.5;\n\n\tint *ptr1 = &x;\n\tint *ptr2 = &y;\n}```"
+                            ],
+                            "question" : "If you added the line cout << ptr2 << endl; to the end of main(), what would be printed?",
+                            "answer" : "The address of y is printed.",
+                            "explanation" : "The address of y is printed because ptr2 is a pointer to y. When you print ptr2, you are printing the address of y.",
+                            "learning_objectives" : [1, 2]
+                        },
+                        "2" : {
+                            "id": 2,
+                            "title" : "Exercise: Addresses and Pointers",
+                            "question_background": [
+                                "Consider the program below and answer a few questions.",
+                                "int main() {\n\tint x = 4;\n\tint y = 7;\n\tdouble z = 1.5;\n\n\tint *ptr1 = &x;\n\tint *ptr2 = &y;\n}"
+                            ],
+                            "question" : "Suppose you added the line ptr1 = &ptr2; to the end of main(). Would the compiler allow this? If so, what would the effect of that line be?",
+                            "answer" : "No.",
+                            "explanation" : "ptr1 as type int* while &ptr2 is type int**. The compiler will not allow this because the types do not match. You cannot assign an int** to an int*.",
+                            "learning_objectives" : [4]
+                        },
+                        "3" : {
+                            "id": 3,
+                            "title" : "Exercise: Addresses and Pointers",
+                            "question_background": [
+                                "Consider the program below and answer a few questions.",
+                                "int main() {\n\tint x = 4;\n\tint y = 7;\n\tdouble z = 1.5;\n\n\tint *ptr1 = &x;\n\tint *ptr2 = &y;\n}"
+                            ],
+                            "question" : "Suppose you added the line ptr1 = ptr2; to the end of main(). Would the compiler allow this? If so, what would the effect of that line be?",
+                            "answer" : "Yes, ptr1 would now point to the same address as ptr2. It would no longer point to x, but to y.",
+                            "explanation" : "The compiler will allow this because ptr1 and ptr2 are both of type int*. When you assign ptr2 to ptr1, ptr1 now points to the same address as ptr2. It would no longer point to x, but to y.",
+                            "learning_objectives" : [2, 4]
+                        },
+                        "4" : {
+                            "id": 4,
+                            "title" : "Exercise: Addresses and Pointers",
+                            "question_background": [
+                                "Consider the program below and answer a few questions.",
+                                "int main() {\n\tint x = 4;\n\tint y = 7;\n\tdouble z = 1.5;\n\n\tint *ptr1 = &x;\n\tint *ptr2 = &y;\n}"
+                            ],
+                            "question" : "Would it be possible to change the value of z using either of the two pointers declared in main()? If so, how? If not, why not?",
+                            "answer" : "No, none of the two pointers point to z.",
+                            "explanation" : "The pointers ptr1 and ptr2 are both of type int*, and point to x and y respectively. Neither of them point to z. Therefore, it is not possible to change the value of z using either of the two pointers declared in main().",
+                            "learning_objectives" : [2]
+                        },
+                        "5" : {
+                            "id": 5,
+                            "title" : "Exercise: Addresses and Pointers",
+                            "question_background": [
+                                "Consider the program below and answer a few questions.",
+                                "int main() {\n\tint x = 4;\n\tint y = 7;\n\tdouble z = 1.5;\n\n\tint *ptr1 = &x;\n\tint *ptr2 = &y;\n}"
+                            ],
+                            "question" : "Suppose you added the double* ptr3 = &z; *ptr3 = 5.5 to the end of main(). How would the values of x, y, and z change, if at all?",
+                            "answer" : "The value of z would change to 5.5. The values of x and y would remain the same.",
+                            "explanation" : "The value of z would change to 5.5 because ptr3 is a pointer to z. When you dereference ptr3 and assign it the value 5.5, you are changing the value of z. The values of x and y would remain the same because ptr1 and ptr2 are pointers to x and y respectively, and they are not involved in the assignment to z.",
+                            "learning_objectives" : [1, 2, 3]
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

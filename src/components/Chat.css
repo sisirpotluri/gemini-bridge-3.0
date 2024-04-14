@@ -1,0 +1,29 @@
+/* Chat.css */
+.chat {
+    display: flex;
+    flex-direction: column; /* Stack messages and input vertically */
+    height: 300px; /* Adjust height as needed */
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: scroll; /* Add vertical scroll for overflowing messages */
+  }
+  
+  .messages {
+    flex-grow: 1; /* Allow messages area to take up available space */
+    margin-bottom: 10px; /* Space between messages and input */
+  }
+  
+  .messages div {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #f0f0f0; /* Light gray background for each message */
+    border-radius: 4px;
+  }
+  
+  .chat input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }

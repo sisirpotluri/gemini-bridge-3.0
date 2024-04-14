@@ -1,0 +1,30 @@
+/* Answer.css */
+.answer-container {
+    display: flex; /* Use flexbox for easy alignment */
+    margin-bottom: 20px; /* Add space below the answer area */
+  }
+  
+  .answer-input {
+    flex-grow: 1; /* Allow input to take up available space */
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .white-underline:before {
+    border-bottom: 2px solid white !important; /* Set the underline color to white */
+  }
+  
+  .answer-button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Example blue color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .answer-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }

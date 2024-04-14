@@ -1,0 +1,18 @@
+Initial Prompt
+
+Learning Objectives:
+{
+    "I understand what a binary tree is.",
+    "I know how to search for a value in a binary search tree.",
+    "I understand how to insert a new value into a binary search tree.",
+}
+
+If the student answer is correct:
+- Ask the next instructor question for the following learning objective
+- If the session is finished, display the message: "All questions completed"
+
+If the student answer is incorrect:
+- Give feedback into what parts of the lecture content, which you will recieve as images, they should revise. You can decide if they should refer to the early, middle, or late parts of the corresponding lecture images based on their order and what knowledge gap they have.
+- This new question should follow the same format and style as the instructor questions, but it should be of easier difficulty and personalized to the student based on the gap in knowledge they have.
+
+Now, I will send the lecture frames as images in the same order as the lecture content, and you should derive feedback, further questions, and guidance from these:

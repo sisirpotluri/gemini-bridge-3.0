@@ -1,0 +1,14 @@
+/* Question.css */
+.question-container {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 60px; /* Space between question and answer */
+    margin-bottom: 30px; /* Space between question and answer */
+  }
+  
+.question-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* Dark gray text */
+}

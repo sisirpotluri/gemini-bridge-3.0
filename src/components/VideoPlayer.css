@@ -1,0 +1,20 @@
+/* video-player.css */
+
+
+.video-player {
+    position: relative; /* To position controls if needed */
+    padding-bottom: 56.25%; /* Maintain aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-player iframe, /* For embedded videos */
+  .video-player video,   /* For native video elements */
+  .video-player object,  /* For other video formats */
+  .video-player embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
